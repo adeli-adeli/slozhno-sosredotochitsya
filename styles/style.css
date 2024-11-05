@@ -169,7 +169,6 @@
   font-weight: bold;
 }
 
-
 .difficult-text {
   padding-block-start: 10px;
 }
@@ -202,7 +201,6 @@
   grid-gap: 20px;
   display: grid;
 }
-
 
 .attention-text {
   padding-block-start: 10px;
@@ -251,7 +249,6 @@
   padding-block-end: 60px;
 }
 
-
 .images__card {
   margin-block-start: 20px;
   grid-template-columns: 1fr 1fr 1fr;
@@ -294,6 +291,8 @@
 
 .footer {
   display: grid;
+  align-items: center;
+  justify-items: center;
   min-height: 768px;
   height: 100vh;
   position: relative;
@@ -307,8 +306,6 @@
   text-shadow: 4px 4px 0 var(--header_title-shadow);
   font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   line-height: 82.5%;
-  text-align: center;
-  align-content: center;
 }
 
 .header__theme-menu-button:focus-visible {
