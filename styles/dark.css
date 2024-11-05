@@ -3,10 +3,118 @@
   здесь окажутся стили, которые нужно переопределить принудительно,
   переключая тему
 */
+.theme_dark {
+  --bg-color: #000028;
+  --text-color: #f1b2ce;
+  --accent-color: #ff0070;
+  --main-font: "IBM Plex mono";
+  --title-color: #ff0070;
+  --header_title-color: #db00ff;
+  --header_title-shadow: #ff0070;
+  --subtitle-color: #000028;
+  --decorated-zone: #ff0070;
+}
 
 .page.theme_dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+  --accent-color: #ff0070;
+  background-image: url(../images/cover-image-dark.png);
+}
+
+.theme_dark .header__rec {
+  display: block;
+}
+
+@media (width <= 868px) {
+  .difficult {
+    grid-gap: 20px;
+  }
+
+  .attention__card {
+    grid-template-columns: repeat(1, 1fr);
+    margin-block-start: 20px;
+    grid-gap: 20px;
+    display: grid;
+  }
+
+  .header__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+
+  .header__theme-menu {
+    justify-content: end;
+    padding-inline-end: 20px;
+    align-items: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .rules {
+    grid-gap: 20px;
+  }
+
+  .footer__title {
+    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  }
+}
+
+@media (width <= 500px) {
+  .header {
+    padding: 10px 10px;
+  }
+
+  .header__theme-menu {
+    padding-inline-end: 0;
+  }
+
+  .header__rec {
+    right: 38px;
+    top: 10px;
+  }
+  .header__text {
+    margin-inline-end: 0;
+    margin-block-end: 0;
+  }
+
+  .header__theme-menu {
+    padding-block-start: 0;
+  }
+
+  .difficult {
+    grid-template-columns: 1fr;
+    padding-block-start: 40px;
+  }
+
+  .attention {
+    padding-block-start: 50px;
+  }
+
+  .attention__title {
+    grid-template-columns: 1fr;
+  }
+
+  .rules {
+    grid-template-columns: 1fr;
+    padding-block-start: 50px;
+  }
+
+  .images {
+    padding-block-start: 50px;
+    padding-block-end: 40px;
+  }
+
+  .images__card {
+    margin-block-start: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .difficult-text a {
+    border-bottom: 1px solid var(--text-color);
+  }
+
+  
 }
