@@ -47,6 +47,11 @@
 }
 
 @media (width <= 868px) {
+  .header {
+    min-height: 1024px;
+    height: 100vh;
+  }
+
   .difficult {
     grid-gap: 20px;
   }
@@ -77,6 +82,11 @@
     grid-gap: 20px;
   }
 
+  .footer {
+    min-height: 1024px;
+    height: 100vh;
+  }
+
   .footer__title {
     font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   }
@@ -84,11 +94,14 @@
 
 @media (width <= 500px) {
   .header {
+    min-height: 668px;
+    height: 100vh;
     padding: 10px 10px;
   }
 
   .header__theme-menu {
     padding-inline-end: 0;
+    padding-block-start: 0;
   }
 
   .header__rec {
@@ -135,7 +148,7 @@
   }
 
   .footer {
-    min-height: 667px;
+    min-height: 668px;
     height: 100vh;
   }
 }

@@ -53,9 +53,9 @@
 .header {
   display: grid;
   grid-template-rows: 1fr auto 1fr;
-  min-height: 100vh;
+  min-height: 768px;
+  height: 100vh;
   position: relative;
-  
 }
 
 .decorated-zone::before,
@@ -294,7 +294,8 @@
 
 .footer {
   display: grid;
-  min-height: 100vh;
+  min-height: 768px;
+  height: 100vh;
   position: relative;
   background-color: var(--bg-color);
 }
