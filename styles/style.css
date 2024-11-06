@@ -1,20 +1,16 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-:root {
-  --bg-color: #000028;
-  --text-color: #f1b2ce;
-  --accent-color: #ff0070;
-  --main-font: "IBM Plex mono";
-  --title-color: #ff0070;
-  --header_title-color: #db00ff;
-  --header_title-shadow: #ff0070;
-  --subtitle-color: #000028;
-  --decorated-zone: #ff0070;
-}
-
 .title-decor {
   color: var(--subtitle-color);
   background-color: var(--accent-color);
+}
+
+.title-text {
+  color: var(--title-color);
+  font-size: inherit;
+  font-family: var(--main-font);
+  line-height: 23.4px;
+  font-weight: bold;
 }
 
 .text {
@@ -37,7 +33,7 @@
   font-size: 18px;
   font-family: var(--main-font, sans-serif);
   background-image: url(../images/cover-image-dark.png);
-  background-position: bottom;
+  background-position: center;
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -47,7 +43,7 @@
 .main {
   padding-inline-start: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
   padding-inline-end: clamp(0.625rem, 0.0286rem + 2.5445vw, 1.25rem);
-  background-color: var(--bg-color);
+  padding-block-start: 60px;
 }
 
 .header {
@@ -125,7 +121,7 @@
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--title-color);
+  border: 1px solid currentColor;
   pointer-events: none;
 }
 
@@ -150,23 +146,14 @@
   margin-block-end: 20px;
 }
 
-.difficult {
+.section {
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-gap: 10px;
-  padding-block-start: 60px;
 }
 
-.difficult__first-card {
-  margin-block-end: 20px;
-}
-
-.difficult__title-text {
-  color: var(--title-color);
-  font-size: inherit;
-  font-family: var(--main-font);
-  line-height: 23.4px;
-  font-weight: bold;
+.difficult__card .difficult__block-card:not(:last-of-type) {
+  padding-block-end: 20px;
 }
 
 .difficult-text {
@@ -180,13 +167,13 @@
   text-decoration: none;
 }
 
-.attention {
+.content-section {
   padding-block-start: 80px;
 }
 
 .attention__title {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2fr;
 }
 .attention__title-text {
   color: var(--title-color);
@@ -204,13 +191,6 @@
 
 .attention-text {
   padding-block-start: 10px;
-}
-
-.rules {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-gap: 10px;
-  padding-block-start: 80px;
 }
 
 .rules__title-text {
@@ -242,6 +222,10 @@
 
 .rules__card .rules__block-card:not(:last-of-type) {
   padding-block-end: 20px;
+}
+
+h4 {
+  font-weight: 400;
 }
 
 .images {
@@ -296,7 +280,6 @@
   min-height: 768px;
   height: 100vh;
   position: relative;
-  background-color: var(--bg-color);
 }
 
 .footer__title {
@@ -309,7 +292,7 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--title-color);
+  border-bottom: 1px solid currentColor;
 }
 
 a:focus-visible {
@@ -321,5 +304,5 @@ a:focus-visible {
 }
 
 a:hover {
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid currentColor
 }

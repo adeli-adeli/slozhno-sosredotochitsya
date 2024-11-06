@@ -7,16 +7,17 @@
   --bg-color: #fff1f7;
   --text-color: #353430;
   --accent-color: #ff8dcb;
-  --main-font: "IBM Plex mono";
   --title-color: #353430;
   --header_title-color: #ffc2e6;
   --header_title-shadow: #ff8dcb;
   --subtitle-color: #353430;
   --decorated-zone: #353430;
+  --bg-image: url(../images/cover-image-light.png);
+  --display-none: none;
 }
 
 .page.theme_light {
-  background-image: url(../images/cover-image-light.png);
+  background-image: var(--bg-image);
 }
 
 @media (prefers-color-scheme: light) {
@@ -30,6 +31,7 @@
     --header_title-shadow: #ff8dcb;
     --subtitle-color: #353430;
     --decorated-zone: #353430;
+    
   }
 
   .page {
@@ -43,112 +45,6 @@
 }
 
 .theme_light .header__rec {
-  display: none;
+  display: var(--display-none);
 }
 
-@media (width <= 868px) {
-  .header {
-    min-height: 1024px;
-    height: 100vh;
-  }
-
-  .difficult {
-    grid-gap: 20px;
-  }
-
-  .attention__card {
-    grid-template-columns: repeat(1, 1fr);
-    margin-block-start: 20px;
-    grid-gap: 20px;
-    display: grid;
-  }
-
-  .header__title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  }
-
-  .header__theme-menu {
-    justify-content: end;
-    padding-inline-end: 20px;
-    align-items: center;
-  }
-
-  .header__theme-menu-list {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .rules {
-    grid-gap: 20px;
-  }
-
-  .footer {
-    min-height: 1024px;
-    height: 100vh;
-  }
-
-  .footer__title {
-    font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  }
-}
-
-@media (width <= 500px) {
-  .header {
-    min-height: 668px;
-    height: 100vh;
-    padding: 10px 10px;
-  }
-
-  .header__theme-menu {
-    padding-inline-end: 0;
-    padding-block-start: 0;
-  }
-
-  .header__rec {
-    right: 38px;
-    top: 10px;
-  }
-  .header__text {
-    margin-inline-end: 0;
-    margin-block-end: 0;
-  }
-
-  .difficult {
-    grid-template-columns: 1fr;
-    padding-block-start: 40px;
-  }
-
-  .attention {
-    padding-block-start: 50px;
-  }
-
-  .attention__title {
-    grid-template-columns: 1fr;
-  }
-
-  .rules {
-    grid-template-columns: 1fr;
-    padding-block-start: 50px;
-  }
-
-  .images {
-    padding-block-start: 50px;
-    padding-block-end: 40px;
-  }
-
-  .images__card {
-    margin-block-start: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .difficult-text a {
-    border-bottom: 1px solid var(--text-color);
-  }
-
-  .footer {
-    min-height: 668px;
-    height: 100vh;
-  }
-}
