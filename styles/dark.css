@@ -15,10 +15,10 @@
   --bg-image: url(../images/cover-image-dark.png);
   --display-none: none;
   --display-block: block;
+  --header-hover: rgba(255, 0, 112, 40%);
 }
 
 .page.theme_dark {
-  --accent-color: #ff0070;
   background-image: var(--bg-image);
 }
 
@@ -27,7 +27,6 @@
 }
 
 @media (width <= 868px) {
-
   .header {
     min-height: 1024px;
     height: 100vh;
@@ -63,7 +62,6 @@
     gap: 10px;
   }
 
-  
   .footer {
     min-height: 1024px;
     height: 100vh;
